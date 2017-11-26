@@ -2,16 +2,63 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
   </head>
   <body>
-      <label>Prefix: <input type="text" id="prefix"></label><br />
-      <label>Suffix: <input type="text" id="suffix"></label><br />
-      <label>Separator: <input type="text" id="separator"></label><br />
-      <label>Start: <input type="text" id="start"></label><br />
-      <label>End: <input type="text" id="end"></label><br />
-      <label>Leading Zeros?<input type="checkbox" id="leading"></label><br />
-      <textarea id="output"></textarea><br />
-      <button type="submit" id="button">Generate!</button>
+      <div class="container p3">
+        <div class="form-group row">
+          <label for="prefix" class="col-2 col-form-label">Prefix</label>
+          <div class="col-10">
+            <input class="form-control" type="text" id="prefix">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="suffix" class="col-2 col-form-label">Suffix</label>
+          <div class="col-10">
+            <input class="form-control" type="text" id="suffix">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="separator" class="col-2 col-form-label">Separator</label>
+          <div class="col-10">
+            <input class="form-control" type="text" id="separator">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="start" class="col-2 col-form-label">Start</label>
+          <div class="col-10">
+            <input class="form-control" type="text" id="start">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="end" class="col-2 col-form-label">End</label>
+          <div class="col-10">
+            <input class="form-control" type="text" id="end">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="leading" class="col-2 col-form-label">Leading Zeroes</label>
+          <div class="col-10">
+            <input class="form-control" type="checkbox" id="leading">
+          </div>
+        </div>
+
+        <div class="form-group row">
+            <textarea readonly id="output" class="form-control"></textarea>
+        </div>
+
+        <div class="form-group row">
+            <button type="submit" id="button" class="btn btn-success">Generate!</button>
+        </div>
+      </div>
       <script type="text/javascript" src="magic.js"></script>
   </body>
 </html>
