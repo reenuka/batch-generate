@@ -40,9 +40,9 @@ var startNode = document.getElementById('start');
 var endNode = document.getElementById('end');
 var leadingZerosNode = document.getElementById('leading');
 
-prefixNode.addEventListener("change", getElements, false);
-suffixNode.addEventListener("change", getElements, false);
-separatorNode.addEventListener("change", getElements, false);
-startNode.addEventListener("change", getElements, false);
-endNode.addEventListener("change", getElements, false);
+prefixNode.addEventListener("keyup", getElements, false);
+suffixNode.addEventListener("keyup", getElements, false);
+separatorNode.addEventListener("keyup", getElements, false);
+startNode.addEventListener("keyup", getElements, false);
+endNode.addEventListener("keyup", getElements, false);
 leadingZerosNode.addEventListener("change", getElements, false);
