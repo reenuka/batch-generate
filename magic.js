@@ -11,7 +11,11 @@ function addNumberToString (prefix, suffix, separator, start, end, leadingZeros)
       number = zeroPadding(i, end);
     }
 
-    output.push(prefix + separator + number + separator + suffix);
+    if (!suffix) {
+      output.push(prefix + separator + number);
+    } else {
+      output.push(prefix + separator + number + separator + suffix);
+    }
   }
 
   return output.join("\n");
