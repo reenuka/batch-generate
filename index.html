@@ -3,12 +3,14 @@
   <head>
   </head>
   <body>
-      <label>Prefix: <input type="text"></label>
-      <label>Suffix: <input type="text"></label>
-      <label>Separator: <input type="text"></label>
-      <label>Start: <input type="text"></label>
-      <label>End: <input type="text"></label>
-      <textarea>Output</textarea>
-      <button type= "submit">Generate!</button>
+      <label>Prefix: <input type="text" id="prefix"></label>
+      <label>Suffix: <input type="text" id="suffix"></label>
+      <label>Separator: <input type="text" id="separator"></label>
+      <label>Start: <input type="text" id="start"></label>
+      <label>End: <input type="text" id="end"></label>
+      <label>Leading Zeros?<input type="checkbox" id="leading"></label>
+      <textarea id="output">Output</textarea>
+      <button type="submit" id="button">Generate!</button>
+      <script type="text/javascript" src="magic.js"></script>
   </body>
 </html>
