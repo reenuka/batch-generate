@@ -22,16 +22,27 @@ function addNumberToString (prefix, suffix, separator, start, end, leadingZeros)
 }
 
 function getElements () {
-  var prefix = document.getElementById('prefix').value;
-  var suffix = document.getElementById('suffix').value;
-  var separator = document.getElementById('separator').value;
-  var start = parseInt(document.getElementById('start').value, 10);
-  var end = parseInt(document.getElementById('end').value, 10);
-  var leadingZeros = document.getElementById('leading').checked;
+  var prefix = prefixNode.value;
+  var suffix = suffixNode.value;
+  var separator = separatorNode.value;
+  var start = parseInt(startNode.value, 10);
+  var end = parseInt(endNode.value, 10);
+  var leadingZeros = leadingZerosNode.checked;
   var output = document.getElementById('output');
 
   output.value = addNumberToString(prefix, suffix, separator, start, end, leadingZeros);
 }
 
-var button = document.getElementById('button');
-button.addEventListener("click", getElements, false);
+var prefixNode = document.getElementById('prefix');
+var suffixNode = document.getElementById('suffix');
+var separatorNode = document.getElementById('separator');
+var startNode = document.getElementById('start');
+var endNode = document.getElementById('end');
+var leadingZerosNode = document.getElementById('leading');
+
+prefixNode.addEventListener("change", getElements, false);
+suffixNode.addEventListener("change", getElements, false);
+separatorNode.addEventListener("change", getElements, false);
+startNode.addEventListener("change", getElements, false);
+endNode.addEventListener("change", getElements, false);
+leadingZerosNode.addEventListener("change", getElements, false);
